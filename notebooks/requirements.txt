@@ -1,0 +1,29 @@
+# Dependências para executar stacking_v4_novo_teste.ipynb
+# Instalação: pip install -r requirements.txt
+#
+# Observações:
+# - O notebook foi feito para o Google Colab: usa google.colab.drive (já vem no Colab, não instala via pip).
+#   Fora do Colab, troque CACHE_DIR e OUTPUT_PATH por pastas locais e remova o drive.mount().
+# - torch: instale a versão compatível com a sua GPU/CUDA (https://pytorch.org). No Colab já vem instalado.
+# - torchao NÃO deve estar instalado: versões antigas quebram o peft (o notebook faz pip uninstall torchao).
+
+# Dados e utilitários
+numpy
+pandas
+openpyxl          # leitura/escrita de .xlsx
+gdown             # download dos arquivos do Google Drive
+tqdm
+
+# Modelo clássico (TF-IDF + Regressão Logística, meta-modelo, validação cruzada)
+scikit-learn
+
+# Transformers (BERTimbau, XLM-R, mDeBERTa, Qwen)
+torch
+transformers
+datasets
+accelerate
+sentencepiece     # tokenizadores de XLM-R e mDeBERTa
+protobuf
+
+# LoRA (Qwen2.5-1.5B)
+peft
